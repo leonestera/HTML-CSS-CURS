@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forms</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="formContainer">
+  <form id="registerForm">
+    <div class="formElement">
+      <label for="firstName" class="formLabel">First Name</label>
+      <input id="firstName" name="firstName" class="textInput" placeholder="Your First Name" maxlength="20" minlength="3" required>
+    </div>
+    <input id="hidden" name="hiddenElement" class="textInput" placeholder="Your First Name" type="hidden" value="hiddenValue">
+    <div class="formElement">
+      <label for="lastName" class="formLabel">Last Name</label>
+      <input id="lastName" name="lastName" class="textInput" placeholder="Your Last Name" maxlength="20" minlength="3" required>
+    </div>
+    <div class="formElement">
+      <label for="birthday" class="formLabel">Date</label>
+      <input id="birthday" name="birthday" class="textInput" type="date" required>
+    </div>
+    <div class="formElement">
+      <label for="email" class="formLabel">Email</label>
+      <input id="email" name="email" class="textInput" type="email" placeholder="Your Email" autocomplete="off">
+    </div>
+    <div class="formElement">
+      <label for="city" class="formLabel">City</label>
+      <select id="city" class="textInput" name="city" required>
+        <option value="lviv">Lviv</option>
+        <option value="vinnytsia" selected="selected">Vinnytsia</option>
+        <option value="kiev">Kiev</option>
+        <option value="odessa">Odessa</option>
+      </select>
+    </div>
+    <div class="formElement">
+      <label for="photos" class="formLabel">Photos</label>
+      <input id="photos" name="photos" class="textInput" type="file" placeholder="Your Photos" multiple>
+    </div>
+    <div class="formElement">
+      <span class="formLabel">Please chose languages your know</span>
+      <div class="checkboxRadioWrapper">
+        <input id="programLanguagesHTML" name="programLanguagesHTML" type="checkbox" class="squareCheckbox">
+        <label for="programLanguagesHTML" class="formLabel checkboxLabel">HTML</label>
+      </div>
+      <div class="checkboxRadioWrapper">
+        <input id="programLanguagesCSS" name="programLanguagesCSS" type="checkbox" class="squareCheckbox">
+        <label for="programLanguagesCSS" class="formLabel checkboxLabel">CSS</label>
+      </div>
+      <div class="checkboxRadioWrapper">
+        <input id="programLanguagesJS" name="programLanguagesJS" type="checkbox" class="squareCheckbox">
+        <label for="programLanguagesJS" class="formLabel checkboxLabel">JS</label>
+      </div>
+    </div>
+    <div class="formElement">
+      <span class="formLabel">Please chose your favorite language</span>
+      <div class="checkboxRadioWrapper">
+        <input id="radioHTML" name="favoriteLanguage" type="radio" value="html">
+        <label for="radioHTML" class="formLabel">HTML</label>
+      </div>
+      <div class="checkboxRadioWrapper">
+        <input id="radioCSS" name="favoriteLanguage" type="radio" value="css" />
+        <label for="radioCSS" class="formLabel">CSS</label>
+      </div>
+      <div class="checkboxRadioWrapper">
+        <input id="radioJS" name="favoriteLanguage" type="radio" value="js" />
+        <label for="radioJS" class="formLabel">JS</label>
+      </div>
+    </div>
+    <div class="formElement">
+      <label for="description" class="formLabel">Description</label>
+      <textarea id="description" name="description" rows="5"  class="textInput"></textarea>
+    </div>
+    <button class="registerButton">Register</button>
+    <div id="formResults"></div>
+  </form>
+</div>
+  <script>
+    const registerForm = document.getElementById("registerForm");
+
+    registerForm.addEventListener("submit", (formData) => {
+      formData.preventDefault();
+      const formResults = document.getElementById("formResults");
+      formResults.textContent = '';
+
+      const registerFormData = new FormData(registerForm);
+
+      for (let [key, value] of registerFormData.entries()) {
+        console.log(`${key}: ${value}`);
+        const newElement = document.createElement('div');
+        newElement.textContent = `${key}: ${value}`;
+        newElement.classList.add('formResultField');
+        formResults.appendChild(newElement);
+      }
+    })
+  </script>
+</body>
+</html>
