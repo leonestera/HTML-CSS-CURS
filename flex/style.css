@@ -1,0 +1,80 @@
+body {
+    background-color: #f4f4f4;
+}
+.photo-gallery {
+    display: inline-block;
+    flex-direction: row;
+    position: relative;
+    /* flex-wrap: wrap; */
+}
+ .caption {
+    position: absolute;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+.photo-item {
+    /* display: block;
+    width: 220px;
+    height: 220px;
+    margin: 3.8px; */
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: 1px; 
+}
+.my-form {
+    padding: 20px;
+}
+.my-form label {
+    display: block;
+}
+.my-form .form-group {
+  padding-bottom: 15px;
+}
+.my-form input[type="text"], .my-form textarea {
+    width: 100%;
+    padding: 8px;
+}
+.button {
+    background-color: black;
+    color: beige;
+    padding: 10px 15px;
+    border: none;
+    font-size: large;
+}
+.button:hover {
+    background-color: rgba(41, 39, 41, 0.9);
+}
+@media only screen and (max-width: 1200px) {
+    .photo-item {
+        width: 500px;
+        height: 500px;
+    }
+    .caption {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .photo-item {
+            width: 350px;
+            height: 350px;
+        }
+    .caption {
+        font-size: 34px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .photo-item {
+        width: 320px;
+        height: 300px;
+    }
+        }
+    .caption {
+        font-size: 44px;
+    }
+
