@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Lato', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+
+    .form-card {
+      background-color: #fff;
+      padding: 20px;
+      margin: auto;
+      width: 500px;
+      margin-top: 250px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 30px;
+      cursor: pointer;
+      background: #047aed;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+
+    .tooltip {
+      display: inline-block;
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .tooltip:hover .arrow {
+      position: absolute;
+      display: block;
+      top: 25px;
+      left: 5px;
+      width: 5px;
+      height: 5px;
+      background-color: #fff;
+      border-width: 2px;
+      margin-left: 2px;
+      border-style: solid;
+      transform: rotate(45deg);
+      z-index: 5;
+      border-color: black transparent transparent black
+    }
+
+    .form-control input[type='text'],
+    .form-control input[type='email'] {
+      border: 0;
+      border-bottom: 1px solid #047aed;
+      width: 100%;
+      padding: 3px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: white;
+      color: #000;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 150%;
+      left: 50%;
+      margin-left: -60px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-card">
+    <h1>Request a Demo</h1>
+    <form>
+      <div class="form-control">
+        <input type="text" name="firstName" placeholder="First Name" required>
+      </div>
+      <div class="form-control">
+        <input type="text" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Passwort
+          <div class="tooltip">?
+            <span class="tooltiptext">Your password should be 8-16 characters long.</span>
+            <span class="arrow"></span>
+          </div>
+        </label>
+        <div class="form-control"><input type="email" name="email" placeholder="Email" required>
+        </div>
+      </div>
+      <input type="submit" value="Send" class="btn btn-primary">
+    </form>
+  </div>
+  <div class="form-group">
+    <label for="password">Passwort
+      <div class="tooltip">?
+        <span class="tooltiptext">Your password should be 8-16 characters long.</span>
+        <span class="arrow"></span>
+      </div>
+    </label>
+    <input type="password" id="password" class="form-control" placeholder="Enter your password">
+  </div>
+
+</body>
+
+</html>

@@ -28,7 +28,7 @@ header {
 #my-form label {
     display: block;
 }
-#my-form input[type=text], #my-form textarea {
+#my-form input[type=text], #birthday, #my-form textarea {
    width: 100%;
    padding: 8px;
    margin-bottom: 10px;
