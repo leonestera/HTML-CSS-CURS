@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Table and list</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="pageContainer">
+  <div class="pageContainer">
+    <div class="tableContainer">
+      <div class="sectionTitle">Company workers</div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Skills</th>
+            <th>Department</th>
+            <th>Position</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" class="centerAlignment idColumn">1</td>
+            <td rowspan="2">Andriy</td>
+            <td rowspan="2">Shevchenko</td> 
+            <td>Communication</td>
+            <td rowspan="2" class="cellCenter">IT</td>           
+            <td rowspan="2">Team Lead</td>                      
+            <td rowspan="2">3,000</td>
+          </tr>
+          <tr>
+            <td>Problem solving</td>
+          </tr>
+          <tr>
+            <td rowspan="3" class="centerAlignment idColumn">2</td>
+            <td rowspan="3">Lady</td>
+            <td rowspan="3">Gaga</td>
+            <td>JS</td>   
+            <td rowspan="3" class="cellCenter">IT</td>        
+            <td rowspan="3">FE developer</td>          
+            <td rowspan="3">2,500</td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td rowspan="2" class="centerAlignment idColumn">3</td>
+            <td rowspan="2">Linus</td>
+            <td rowspan="2">Torvalds</td> 
+            <td>Java</td> 
+            <td rowspan="2" class="cellCenter">IT</td>       
+            <td rowspan="2">BE developer</td>           
+            <td rowspan="2">2,500</td>
+          </tr>
+          <tr>
+            <td>MySQL</td>
+          </tr>
+          <tr>
+            <td colspan="4">Total Workers</td>
+            <td colspan="3" class="totalValue">3</td>
+          </tr>
+          <tr>
+            <td colspan="4">Total Salary</td>
+            <td colspan="3" class="totalValue">8000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="listsContainer">
+      <div class="sectionTitle">Job Requirements</div>
+      <div class="listContainer">
+        <div class="subSectionTitle">FE requirements: </div>
+        <ul>
+          <li>JS</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+      <div class="listContainer">
+        <div class="subSectionTitle">BE requirements: </div>
+        <ol>
+          <li>Java</li>
+          <li>MySQL</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
