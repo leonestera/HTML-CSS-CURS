@@ -110,6 +110,10 @@
       margin-left: -60px;
       border: 1px solid black;
     }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
   </style>
 </head>
 
@@ -136,16 +140,6 @@
       <input type="submit" value="Send" class="btn btn-primary">
     </form>
   </div>
-  <div class="form-group">
-    <label for="password">Passwort
-      <div class="tooltip">?
-        <span class="tooltiptext">Your password should be 8-16 characters long.</span>
-        <span class="arrow"></span>
-      </div>
-    </label>
-    <input type="password" id="password" class="form-control" placeholder="Enter your password">
-  </div>
-
 </body>
 
 </html>
