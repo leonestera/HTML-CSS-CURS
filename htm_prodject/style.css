@@ -1,0 +1,359 @@
+:root {
+  --heading-color:  #f39c12 !important;
+}
+body {
+    background: url(assers/fon.jpg);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+.nav-link {
+transition: color 0.3s;
+}
+.nav-link:hover {
+color: #f39c12 !important;
+}
+.nav-menu > a:hover {
+border-bottom: 2px solid #f39c12;
+}
+.dropdown-item:hover {
+color: #f39c12 !important;
+  }
+.full-width-line {
+  display: none;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  margin: 10px 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 130px;
+}
+
+.nav-menu .line {
+  border-left: 2px solid gray;
+  height: 1.5em;
+}
+
+.search-container {
+  width: 300px;
+}
+
+.search-container input {
+  width: 100%;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style: none;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    word-wrap: break-word;
+    text-transform: unset;
+    font-family: "Playfair Display", sans-serif;
+}
+p {
+    font-size: medium;
+    font-family: "Playfair Display", sans-serif;
+}
+.txt-btn {
+    background-color: var(--heading-color);
+    font-size: large;
+    padding: 20px 45px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1a2f33;
+    font-family: "Josefin Sans", sans-serif;
+    transition: all 0.5s;
+}
+.txt-btn:hover {
+  padding: 22px 47px;
+  transition: all 0.5s;
+  opacity: 0.9;
+}
+.txt-style {
+    text-decoration: none; 
+}
+.txt-subtitle {
+    text-transform: uppercase;
+    font-size: small;
+    letter-spacing: 1px;
+    
+}
+.subtitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.subtitle::before {
+    content: '';
+    display: block;
+    width: 30px;
+    margin-right: 10px;
+    height: 3px; 
+    background-color: #f39c12;
+    margin-left: 10px; 
+}
+.card {
+    max-width: 450px; 
+  }
+  
+  img.rounded-circle {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; 
+  }
+  
+  .text-warning {
+    font-size: 1.2rem; 
+  }
+.card-data {
+    color: rgb(204 204 204);
+}
+.card-show {
+    max-width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-inhalt {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stars {
+    font-size: 18px;
+    color: #f39c12;
+  }
+  
+  .card-body {
+    margin-top: 10px;
+  }
+  .card-title {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #333;
+  }
+  #my-form {
+    background-color: #fff;
+    width: 100%; 
+    max-width: 1400px; 
+    margin: 0 auto;
+  }
+  #my-form .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px !important;
+  }
+  #my-form button {
+    background-color: var(--heading-color);
+    font-size: large;
+    padding: 20px 45px;
+    border-radius: 5px;
+    width: 250px;
+    height: 60px;
+    color: #1a2f33;
+    font-family: "Josefin Sans", sans-serif;
+    transition: all 0.5s;
+  }
+  #my-form button:hover {
+    width: 255px;
+    height: 65px;
+    transition: all 0.5s;
+    opacity: 0.9;
+  }
+  #my-form .border {
+    width: 60%; 
+    margin: 0 auto;
+    height: 300px;
+  }
+  #my-form .name-field {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+  }
+  #my-form .half-field {
+    width: 28%;
+    box-sizing: border-box;
+  }
+#my-form .half-field:not(:last-child) {
+    margin-right: 50px; 
+}
+#my-form input[type="text"],
+#my-form input[type="password"],
+#my-form input[type="email"] {
+    border-radius: 0;
+}
+.footer-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+footer .bi {
+  font-size: 1.5rem; 
+  color: gray;
+}
+footer .bi:hover {
+  color: #f39c12;
+}
+footer hr {
+  border-color: #333;
+  width: 100%;
+}
+  @media (max-width: 768px) {
+    header {
+      display: block; 
+      padding: 0;
+      position: unset;
+    }
+    .navbar-brand {
+      display: block;
+      text-align: center;
+    }
+
+    .nav-menu {
+      display: block;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .nav-menu a {
+      display: block;
+      margin: 10px 0;
+    }
+    .nav-menu > a:hover {
+  border-bottom: none;
+    }
+    .nav-menu .line {
+     display: none;
+    }
+    .full-width-line {
+      display: block;
+    }
+
+    .search-container {
+      width: 100%; 
+      margin-top: 10px;
+    }
+
+    .search-container input {
+      width: 100%;
+    }
+
+    .submenu {
+      position: static; 
+      display: none;
+      text-align: center;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    input.form-control {
+      padding: 0;
+      height: 50px;
+    }
+      .card-show {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+
+      }
+      .card-inhalt {
+        flex-direction: column;
+      }
+      .avatar {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+      .card-show {
+        width: 100%;
+        height: 400px;
+      }
+      .card-info {
+        text-align: left;
+        width: 100%;
+      }
+      .text-comtent {
+        text-align: left;
+        width: 100%;
+      }
+      #my-form .half-field {
+        display: block;
+        width: 60%;
+      }
+      .toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      #my-form .half-field:not(:last-child) {
+        margin-right: 0; 
+    }
+    .relation {
+        text-align: left;
+    }
+    .showcase {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer-img {
+      display: block;
+     width: 80vw;
+     margin: 0 10px;
+      height: 400px;
+      object-fit: cover;
+      align-items: center;
+      justify-content: center;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   justify-content: space-around;
+   margin-bottom: 20px;
+  }
+}
