@@ -1,31 +1,70 @@
 :root {
   --heading-color:  #f39c12 !important;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--heading-color);
+  border-radius: 10px;
+  height: 50px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
     background: url(assers/fon.jpg);
+    overflow-x: hidden;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #f8f9fa;
   border-bottom: 1px solid #ddd;
   position: sticky;
+  margin-top: 20px;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 10px 10px;
+  padding: 0 30px;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 5px 10px 0 rgba(26, 47, 51, 0.2);
 }
 .nav-link {
 transition: color 0.3s;
 }
 .nav-link:hover {
-color: #f39c12 !important;
+color: var(--heading-color) !important;
 }
-.nav-menu > a:hover {
-border-bottom: 2px solid #f39c12;
+.nav-menu > a {
+  position: relative;
+  text-decoration: none;
+}
+.nav-menu > a::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--heading-color);
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.nav-menu > a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 .dropdown-item:hover {
-color: #f39c12 !important;
+color: var(--heading-color) !important;
   }
 .full-width-line {
   display: none;
@@ -61,6 +100,79 @@ color: #f39c12 !important;
 }
 .dropdown:hover .submenu {
   display: block;
+}
+.swiper-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100vh; 
+  z-index: 0; 
+  overflow: hidden; 
+}
+.swiper-slide {
+  height: 100vh; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+h2 {
+  font-size: 48px;
+  font-weight: 900 !important;
+  word-wrap: break-word;
+  text-transform: unset;
+  font-family: "Playfair Display", sans-serif !important;
+  margin-left: 3rem;
+}
+.txt-btn {
+  background-color: var(--heading-color);
+  font-size: large;
+  padding: 20px 45px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #1a2f33;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 0.5s;
+}
+.txt-btn:hover {
+padding: 22px 47px;
+transition: all 0.5s;
+opacity: 0.9;
+}
+.txt-style {
+  text-decoration: none; 
+}
+.txt-subname {
+  font-weight: 800;
+  font-size: small;
+  font-family: "Playfair Display", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px; 
+}
+.alle {
+  display: block;
+  flex-direction: column;
+  z-index: 10;
+  margin-top: 250px;
+
+}
+.homeButton {
+  margin-left: 50px;
+}
+ .subname {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+.subname::before {
+  content: '';
+  display: block;
+  width: 30px;
+  margin-right: 10px;
+  height: 3px; 
+  background-color: var(--heading-color);
+  margin-left: 10px; 
 }
 h1 {
     font-size: 48px;
@@ -107,7 +219,7 @@ p {
     width: 30px;
     margin-right: 10px;
     height: 3px; 
-    background-color: #f39c12;
+    background-color: var(--heading-color);
     margin-left: 10px; 
 }
 .card {
@@ -150,7 +262,7 @@ p {
   }
   .stars {
     font-size: 18px;
-    color: #f39c12;
+    color: var(--heading-color);
   }
   .card-body {
     margin-top: 10px;
@@ -223,7 +335,7 @@ footer .bi {
   color: gray;
 }
 footer .bi:hover {
-  color: #f39c12;
+  color: var(--heading-color);
 }
 footer hr {
   border-color: #333;
@@ -268,7 +380,9 @@ footer hr {
     header {
       display: block; 
       padding: 0;
-      position: unset;
+      position: relative;
+      height: 350px;
+      margin-top: 0;
     }
     .navbar-brand {
       display: block;
@@ -283,8 +397,9 @@ footer hr {
       display: block;
       margin: 10px 0;
     }
-    .nav-menu > a:hover {
-  border-bottom: none;
+    .nav-menu > a:hover::after {
+      width: 100%;
+      opacity: 0;
     }
     .nav-menu .line {
      display: none;
@@ -310,6 +425,10 @@ footer hr {
     input.form-control {
       padding: 0;
       height: 50px;
+      padding-left: 20px;
+    }
+    .gap {
+      height: 20px;
     }
       .card-show {
         display: flex;
@@ -379,7 +498,6 @@ footer hr {
   }
   .access {
     margin-right: 0;
-    padding-left: 0px;
-    
+    padding-left: 0px; 
   }
 }
